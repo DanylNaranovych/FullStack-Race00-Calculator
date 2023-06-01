@@ -6,8 +6,18 @@
   </head>
   <body>
     <h1>Calculator</h1>
+    <div class="history">
+      <ul id="history-list"></ul>
+    </div>
     <div class="calculator">
-      <input type="text" id="display" value="0" readonly>
+      <div class="display-container">
+        <div class="circles">
+          <div class="circle" id = "blue"></div>
+          <div class="circle" id = "purple"></div>
+          <div class="circle" id = "green"></div>
+        </div>
+        <input type="text" id="display" value="0" readonly>
+      </div>      
       <div class="buttons">
         <button onclick="clearDisplay()">C</button>
         <button onclick="appendValue('+/-')">+/-</button>
