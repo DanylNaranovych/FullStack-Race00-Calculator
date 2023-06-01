@@ -43,8 +43,11 @@ body {
   box-sizing: border-box;
   height: 100px;
   font-size: 30px;
-  text-align: center;
-  padding-left: 80%;
+  text-align: right;
+  padding-right: 15px;
+  overflow: hidden; /* Hide the overflowing content */
+  white-space: nowrap; /* Prevent line breaks */
+  text-overflow: ellipsis; /* Show an ellipsis (...) for overflow */
   color: rgb(90, 144, 223);
 }
 
