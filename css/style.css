@@ -29,6 +29,15 @@ body {
   background-color: rgb(104,202,162);
 }
 
+.buttons button:hover {
+  background-color: rgb(111, 130, 175);
+  cursor: pointer;
+}
+
+.buttons button:active {
+  background-color: rgb(60, 87, 193);
+}
+
 
 #display {
   width: 97%;
