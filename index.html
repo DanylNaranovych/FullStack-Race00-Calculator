@@ -53,6 +53,7 @@
           <button onclick="openConverter('length')">Open Length Converter</button>
           <button onclick="openConverter('weight')">Open Weight and Mass Converter</button>
           <button onclick="openConverter('area')">Open Area Converter</button>
+          <button onclick="openConverter('binary')">Numeral System Calculator</button>
         </div>
       </div>
       <div id="lengthConverter" class="converter">
@@ -79,7 +80,6 @@
           <option value="in">Inches</option>
         </select>
         <button onclick="convertLength()">Convert</button>
-        <h2>Result</h2>
         <p id="lengthResult"></p>
       </div>
       <div id="weightConverter" class="converter">
@@ -115,8 +115,33 @@
         </select>
         <button onclick="convertArea()">Convert</button>
         <p id="areaResult"></p>
-        <script src= "js/script.js"></script>
-        <script src ="js/convertors.js"></script>
       </div>
+      <div id = "binaryConverter" class="converter">
+        <h1>Numeral System Calculator</h1>
+        <select id="system1">
+          <option value="binary">Binary</option>
+          <option value="decimal" selected>Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+        </select>
+        <div>
+          <input type="text" id="num1" placeholder="Enter number 1" value = 0>
+        </div>
+        <div>
+          <input type="text" id="num2" placeholder="Enter number 2" value = 0>
+        </div>
+        <div>
+          <button id="add">(+)</button>
+          <button id="subtract">(-)</button>
+          <button id="multiply">(*)</button>
+          <button id="divide">(/)</button>
+        </div>
+        <br>
+        <div>
+          <input type="text" id="result" placeholder="Result" readonly>
+        </div>
+      </div>
+    <script src = "js/script.js"></script>
+    <script src = "js/convertors.js"></script>
+    <script src = "js/binary.js"></script>
   </body>
 </html>
