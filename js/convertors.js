@@ -156,16 +156,43 @@ function convertArea() {
   document.getElementById("areaResult").innerHTML = result.toFixed(2) + " " + unitTo;
 }
 
-function openConverter(converter) {
-	var converterElement = document.getElementById(converter + "Converter");
-	if (converterElement) {
-		converterElement.style.display = "block";
-	}
-}
-
-function hideAllConverters() {
+function openConverter(converterType) {
 	var converters = document.getElementsByClassName("converter");
 	for (var i = 0; i < converters.length; i++) {
-		converters[i].style.display = "none";
+	  converters[i].style.display = "none";
 	}
-}
+	
+	// Скрыть калькулятор
+	var calculator = document.getElementsByClassName("calculator")[0];
+	calculator.style.display = "none";
+	
+	// Отобразить выбранный конвертер
+	var converter = document.getElementById(converterType + "Converter");
+	converter.style.display = "block";
+	
+	// Создать кнопку "Back" (Назад)
+	var backButton = document.createElement("button");
+	backButton.innerText = "Back";
+	backButton.onclick = function() {
+	  // Скрыть конвертер
+	  converter.style.display = "none";
+	  
+	  // Отобразить калькулятор
+	  calculator.style.display = "block";
+	  
+	  // Удалить кнопку "Back" (Назад)
+	  backButton.remove();
+	};
+	
+	// Добавить кнопку "Back" (Назад) к конвертеру
+	converter.appendChild(backButton);
+  }
+  
+
+// function hideAllConverters() {
+// 	var converters = document.getElementsByClassName("converter");
+// 	for (var i = 0; i < converters.length; i++) {
+// 		converters[i].style.display = "none";
+// 	}
+// }
+

@@ -184,12 +184,16 @@ function toggleAdditionalButtons() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    toggleAdditionalButtons();
+  });
+
 function factorial() {
     checkAndPushNum();
     let result = 1;
     let num = 0;
     !arrNum[1] ? num = arrNum[0] : num = arrNum[1];
-    while (num !== 1) {
+    while (num <= 1) {
         result *= num;
         num--;
     }
