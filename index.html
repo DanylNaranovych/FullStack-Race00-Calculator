@@ -49,7 +49,74 @@
           <button onclick="appendValue('.')">.</button>
           <button class="equal" onclick="calculate()">=</button>
         </div>
+        <div class="additional-buttons-bottom">
+          <button onclick="openConverter('length')">Open Length Converter</button>
+          <button onclick="openConverter('weight')">Open Weight and Mass Converter</button>
+          <button onclick="openConverter('area')">Open Area Converter</button>
+          <button onclick="hideAllConverters()">Close All Converters</button>
+        </div>
       </div>
-    <script src="js/script.js"></script>
+      <div id="lengthConverter" class="converter">
+        <h2>Length Converter</h2>
+        <input type="number" id="lengthValue" inputmode="numeric">
+        <select id="lengthUnitFrom">
+          <option value="m">Meters</option>
+          <option value="km">Kilometers</option>
+          <option value="cm">Centimeters</option>
+          <option value="mm">Millimeters</option>
+          <option value="mi">Miles</option>
+          <option value="yd">Yards</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
+        <select id="lengthUnitTo">
+          <option value="m">Meters</option>
+          <option value="km">Kilometers</option>
+          <option value="cm">Centimeters</option>
+          <option value="mm">Millimeters</option>
+          <option value="mi">Miles</option>
+          <option value="yd">Yards</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
+        <button onclick="convertLength()">Convert</button>
+        <p id="lengthResult"></p>
+      </div>
+      <div id="weightConverter" class="converter">
+        <h2>Weight and Mass Converter</h2>
+        <input type="number" id="weightValue">
+        <select id="weightUnitFrom">
+          <option value="g">Grams (g)</option>
+          <option value="kg">Kilograms (kg)</option>
+          <option value="t">Tonnes (t)</option>
+        </select>
+        <select id="weightUnitTo">
+          <option value="g">Grams (g)</option>
+          <option value="kg">Kilograms (kg)</option>
+          <option value="t">Tonnes (t)</option>
+        </select>
+        <button onclick="convertWeight()">Convert</button>
+        <p id="weightResult"></p>
+      </div>
+      <div id="areaConverter" class="converter">
+        <h2>Area Converter</h2>
+        <input type="number" id="areaValue">
+        <select id="areaUnitFrom">
+          <option value="cm2">Square Centimeters (cm²)</option>
+          <option value="km2">Square Kilometers (km²)</option>
+          <option value="m2">Square Meters (m²)</option>
+          <option value="ha">Hectares (ha)</option>
+        </select>
+        <select id="areaUnitTo">
+          <option value="cm2">Square Centimeters (cm²)</option>
+          <option value="km2">Square Kilometers (km²)</option>
+          <option value="m2">Square Meters (m²)</option>
+          <option value="ha">Hectares (ha)</option>
+        </select>
+        <button onclick="convertArea()">Convert</button>
+        <p id="areaResult"></p>
+      </div>      
+    <script src= "js/script.js"></script>
+    <script src = "js/convertors.js"></script>
   </body>
 </html>

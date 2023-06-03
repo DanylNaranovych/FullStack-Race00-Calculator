@@ -161,6 +161,17 @@ function calculateOnce() {
 
 function toggleAdditionalButtons() {
     var additionalButtons = document.querySelector('.additional-buttons');
-    additionalButtons.style.display =
-      additionalButtons.style.display === 'none' ? 'grid' : 'none';
+    var additionalButtonsBottom = document.querySelector('.additional-buttons-bottom');
+  
+    if (additionalButtons.style.display === 'none') {
+      additionalButtons.style.display = 'grid';
+      additionalButtonsBottom.style.display = 'block';
+    } else {
+      additionalButtons.style.display = 'none';
+      additionalButtonsBottom.style.display = 'none';
+    }
+    var converters = document.getElementsByClassName("converter");
+    for (var i = 0; i < converters.length; i++) {
+        converters[i].style.display = "none";
+    }
   }
