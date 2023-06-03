@@ -9,33 +9,45 @@
     <div class="calculator">
       <div class="display-container">
         <div class="circles">
-          <div class="circle" id = "blue"></div>
-          <div class="circle" id = "purple"></div>
-          <div class="circle" id = "green"></div>
+          <div class="circle" id="blue"></div>
+          <div class="circle" id="purple"></div>
+          <div class="circle" id="green"></div>
         </div>
         <div id="history"></div>
         <input type="text" id="display" value="0" readonly>
-      </div>      
-      <div class="buttons">
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="appendValue('+/-')">+/-</button>
-        <button onclick="appendValue('%')">%</button>
-        <button onclick="appendValue('/')">÷</button>
-        <button onclick="appendValue('7')">7</button>
-        <button onclick="appendValue('8')">8</button>
-        <button onclick="appendValue('9')">9</button>
-        <button onclick="appendValue('*')">*</button>
-        <button onclick="appendValue('4')">4</button>
-        <button onclick="appendValue('5')">5</button>
-        <button onclick="appendValue('6')">6</button>
-        <button onclick="appendValue('+')">+</button>
-        <button onclick="appendValue('1')">1</button>
-        <button onclick="appendValue('2')">2</button>
-        <button onclick="appendValue('3')">3</button>
-        <button onclick="appendValue('-')">-</button>
-        <button onclick="appendValue('0')">0</button>
-        <button onclick="appendValue('.')">.</button>
-        <button class = "equal" onclick="calculate()">=</button>
+      </div>  
+          <button class = "additional-button" onclick="toggleAdditionalButtons()">Spec</button>
+          <div class="additional-buttons">
+            <button onclick="factorial()">X!</button>
+            <button onclick="exponentiation()">Xⁿ</button>
+            <button onclick="squareRoot()">√x</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryClear()">MC</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySubtract()">M-</button>
+            <button class = "empty"></button>
+          </div>
+        <div class="buttons">
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendValue('+/-')">+/-</button>
+          <button onclick="appendValue('%')">%</button>
+          <button onclick="appendValue('/')">÷</button>
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="appendValue('*')">*</button>
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="appendValue('+')">+</button>
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          <button onclick="appendValue('-')">-</button>
+          <button onclick="appendValue('0')">0</button>
+          <button onclick="appendValue('.')">.</button>
+          <button class="equal" onclick="calculate()">=</button>
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>

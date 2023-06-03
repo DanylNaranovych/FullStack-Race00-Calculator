@@ -158,3 +158,9 @@ function calculateOnce() {
     arrOper.splice(0, 1);
     document.getElementById("display").value = arrNum[0];
 }
+
+function toggleAdditionalButtons() {
+    var additionalButtons = document.querySelector('.additional-buttons');
+    additionalButtons.style.display =
+      additionalButtons.style.display === 'none' ? 'grid' : 'none';
+  }
