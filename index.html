@@ -17,21 +17,21 @@
         <div id="history"></div>
         <input type="text" id="display" value="0" readonly>
       </div>  
-          <button class = "additional-button" onclick="toggleAdditionalButtons()">Special</button>
+          <button class ="additional-button" onclick="toggleAdditionalButtons()">Special</button>
           <div class="additional-buttons">
             <button onclick="factorial()">X!</button>
-            <button onclick="exponentiation()">Xⁿ</button>
+            <button onclick="appendValue('^')">Xⁿ</button>
             <button onclick="squareRoot()">√x</button>
+            <button onclick="calculateInverse()">1/X</button>
             <button onclick="memoryRecall()">MR</button>
             <button onclick="memoryClear()">MC</button>
             <button onclick="memoryAdd()">M+</button>
             <button onclick="memorySubtract()">M-</button>
-            <button class = "empty"></button>
           </div>
         <div class="buttons">
           <button onclick="clearDisplay()">C</button>
           <button onclick="appendValue('+/-')">+/-</button>
-          <button onclick="appendValue('%')">%</button>
+          <button onclick="appendValue('%')" id="percent">%</button>
           <button onclick="appendValue('/')">÷</button>
           <button onclick="appendValue('7')">7</button>
           <button onclick="appendValue('8')">8</button>
@@ -117,6 +117,6 @@
         <p id="areaResult"></p>
       </div>      
     <script src= "js/script.js"></script>
-    <script src = "js/convertors.js"></script>
+    <script src ="js/convertors.js"></script>
   </body>
 </html>
