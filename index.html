@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
   </head>
   <body>
     <h1>Calculator</h1>
@@ -16,7 +17,7 @@
         <div id="history"></div>
         <input type="text" id="display" value="0" readonly>
       </div>  
-          <button class = "additional-button" onclick="toggleAdditionalButtons()">Spec</button>
+          <button class = "additional-button" onclick="toggleAdditionalButtons()">Special</button>
           <div class="additional-buttons">
             <button onclick="factorial()">X!</button>
             <button onclick="exponentiation()">Xⁿ</button>
@@ -49,7 +50,6 @@
           <button class="equal" onclick="calculate()">=</button>
         </div>
       </div>
-    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
