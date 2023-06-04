@@ -190,13 +190,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function factorial() {
     checkAndPushNum();
+
     let result = 1;
     let num = 0;
     !arrNum[1] ? num = arrNum[0] : num = arrNum[1];
-    while (num <= 1) {
+    num = Math.round(num);
+
+    if (num <= 0) return;
+
+    while (num !== 1) {
         result *= num;
         num--;
     }
+
     !arrNum[1] ? (arrNum[0] = result) : (arrNum[1] = result);
     document.getElementById("display").value = !arrNum[1] ? arrNum[0] : arrNum[1];
 }
