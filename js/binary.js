@@ -33,9 +33,6 @@ function performOperation() {
   const decimalNum1 = convertNumber(num1, system1, "decimal");
   const decimalNum2 = convertNumber(num2, system1, "decimal");
 
-  console.log(num1);
-  console.log(num2);
-
   switch (operation) {
     case "add":
       result = parseInt(decimalNum1, 10) + parseInt(decimalNum2, 10);
